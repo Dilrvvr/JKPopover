@@ -1,0 +1,550 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		500DA3B91CD5A19D001419C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3B81CD5A19D001419C7 /* main.m */; };
+		500DA3BC1CD5A19E001419C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3BB1CD5A19E001419C7 /* AppDelegate.m */; };
+		500DA3BF1CD5A19E001419C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3BE1CD5A19E001419C7 /* ViewController.m */; };
+		500DA3C21CD5A19E001419C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500DA3C01CD5A19E001419C7 /* Main.storyboard */; };
+		500DA3C41CD5A19E001419C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500DA3C31CD5A19E001419C7 /* Assets.xcassets */; };
+		500DA3C71CD5A19E001419C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500DA3C51CD5A19E001419C7 /* LaunchScreen.storyboard */; };
+		500DA3D21CD5A19E001419C7 /* JKPopoverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3D11CD5A19E001419C7 /* JKPopoverTests.m */; };
+		500DA3DD1CD5A19E001419C7 /* JKPopoverUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3DC1CD5A19E001419C7 /* JKPopoverUITests.m */; };
+		500DA3F11CD5A1C5001419C7 /* JKPopoverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3EC1CD5A1C5001419C7 /* JKPopoverItem.m */; };
+		500DA3F21CD5A1C5001419C7 /* JKPopoverTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3EE1CD5A1C5001419C7 /* JKPopoverTool.m */; };
+		500DA3F31CD5A1C5001419C7 /* JKPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3F01CD5A1C5001419C7 /* JKPopoverView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		500DA3CE1CD5A19E001419C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500DA3AC1CD5A19D001419C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 500DA3B31CD5A19D001419C7;
+			remoteInfo = JKPopover;
+		};
+		500DA3D91CD5A19E001419C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 500DA3AC1CD5A19D001419C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 500DA3B31CD5A19D001419C7;
+			remoteInfo = JKPopover;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		500DA3B41CD5A19D001419C7 /* JKPopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKPopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		500DA3B81CD5A19D001419C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		500DA3BA1CD5A19E001419C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		500DA3BB1CD5A19E001419C7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		500DA3BD1CD5A19E001419C7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		500DA3BE1CD5A19E001419C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		500DA3C11CD5A19E001419C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		500DA3C31CD5A19E001419C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		500DA3C61CD5A19E001419C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		500DA3C81CD5A19E001419C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		500DA3CD1CD5A19E001419C7 /* JKPopoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKPopoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		500DA3D11CD5A19E001419C7 /* JKPopoverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKPopoverTests.m; sourceTree = "<group>"; };
+		500DA3D31CD5A19E001419C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		500DA3D81CD5A19E001419C7 /* JKPopoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKPopoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		500DA3DC1CD5A19E001419C7 /* JKPopoverUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKPopoverUITests.m; sourceTree = "<group>"; };
+		500DA3DE1CD5A19E001419C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		500DA3EB1CD5A1C5001419C7 /* JKPopoverItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPopoverItem.h; sourceTree = "<group>"; };
+		500DA3EC1CD5A1C5001419C7 /* JKPopoverItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPopoverItem.m; sourceTree = "<group>"; };
+		500DA3ED1CD5A1C5001419C7 /* JKPopoverTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPopoverTool.h; sourceTree = "<group>"; };
+		500DA3EE1CD5A1C5001419C7 /* JKPopoverTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPopoverTool.m; sourceTree = "<group>"; };
+		500DA3EF1CD5A1C5001419C7 /* JKPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPopoverView.h; sourceTree = "<group>"; };
+		500DA3F01CD5A1C5001419C7 /* JKPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPopoverView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		500DA3B11CD5A19D001419C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		500DA3CA1CD5A19E001419C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		500DA3D51CD5A19E001419C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		500DA3AB1CD5A19D001419C7 = {
+			isa = PBXGroup;
+			children = (
+				500DA3B61CD5A19D001419C7 /* JKPopover */,
+				500DA3D01CD5A19E001419C7 /* JKPopoverTests */,
+				500DA3DB1CD5A19E001419C7 /* JKPopoverUITests */,
+				500DA3B51CD5A19D001419C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		500DA3B51CD5A19D001419C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				500DA3B41CD5A19D001419C7 /* JKPopover.app */,
+				500DA3CD1CD5A19E001419C7 /* JKPopoverTests.xctest */,
+				500DA3D81CD5A19E001419C7 /* JKPopoverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		500DA3B61CD5A19D001419C7 /* JKPopover */ = {
+			isa = PBXGroup;
+			children = (
+				500DA3BA1CD5A19E001419C7 /* AppDelegate.h */,
+				500DA3BB1CD5A19E001419C7 /* AppDelegate.m */,
+				500DA3BD1CD5A19E001419C7 /* ViewController.h */,
+				500DA3BE1CD5A19E001419C7 /* ViewController.m */,
+				500DA3EA1CD5A1C5001419C7 /* JKPopover */,
+				500DA3C01CD5A19E001419C7 /* Main.storyboard */,
+				500DA3C31CD5A19E001419C7 /* Assets.xcassets */,
+				500DA3C51CD5A19E001419C7 /* LaunchScreen.storyboard */,
+				500DA3C81CD5A19E001419C7 /* Info.plist */,
+				500DA3B71CD5A19D001419C7 /* Supporting Files */,
+			);
+			path = JKPopover;
+			sourceTree = "<group>";
+		};
+		500DA3B71CD5A19D001419C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				500DA3B81CD5A19D001419C7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		500DA3D01CD5A19E001419C7 /* JKPopoverTests */ = {
+			isa = PBXGroup;
+			children = (
+				500DA3D11CD5A19E001419C7 /* JKPopoverTests.m */,
+				500DA3D31CD5A19E001419C7 /* Info.plist */,
+			);
+			path = JKPopoverTests;
+			sourceTree = "<group>";
+		};
+		500DA3DB1CD5A19E001419C7 /* JKPopoverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				500DA3DC1CD5A19E001419C7 /* JKPopoverUITests.m */,
+				500DA3DE1CD5A19E001419C7 /* Info.plist */,
+			);
+			path = JKPopoverUITests;
+			sourceTree = "<group>";
+		};
+		500DA3EA1CD5A1C5001419C7 /* JKPopover */ = {
+			isa = PBXGroup;
+			children = (
+				500DA3EB1CD5A1C5001419C7 /* JKPopoverItem.h */,
+				500DA3EC1CD5A1C5001419C7 /* JKPopoverItem.m */,
+				500DA3ED1CD5A1C5001419C7 /* JKPopoverTool.h */,
+				500DA3EE1CD5A1C5001419C7 /* JKPopoverTool.m */,
+				500DA3EF1CD5A1C5001419C7 /* JKPopoverView.h */,
+				500DA3F01CD5A1C5001419C7 /* JKPopoverView.m */,
+			);
+			path = JKPopover;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		500DA3B31CD5A19D001419C7 /* JKPopover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 500DA3E11CD5A19E001419C7 /* Build configuration list for PBXNativeTarget "JKPopover" */;
+			buildPhases = (
+				500DA3B01CD5A19D001419C7 /* Sources */,
+				500DA3B11CD5A19D001419C7 /* Frameworks */,
+				500DA3B21CD5A19D001419C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JKPopover;
+			productName = JKPopover;
+			productReference = 500DA3B41CD5A19D001419C7 /* JKPopover.app */;
+			productType = "com.apple.product-type.application";
+		};
+		500DA3CC1CD5A19E001419C7 /* JKPopoverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 500DA3E41CD5A19E001419C7 /* Build configuration list for PBXNativeTarget "JKPopoverTests" */;
+			buildPhases = (
+				500DA3C91CD5A19E001419C7 /* Sources */,
+				500DA3CA1CD5A19E001419C7 /* Frameworks */,
+				500DA3CB1CD5A19E001419C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				500DA3CF1CD5A19E001419C7 /* PBXTargetDependency */,
+			);
+			name = JKPopoverTests;
+			productName = JKPopoverTests;
+			productReference = 500DA3CD1CD5A19E001419C7 /* JKPopoverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		500DA3D71CD5A19E001419C7 /* JKPopoverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 500DA3E71CD5A19E001419C7 /* Build configuration list for PBXNativeTarget "JKPopoverUITests" */;
+			buildPhases = (
+				500DA3D41CD5A19E001419C7 /* Sources */,
+				500DA3D51CD5A19E001419C7 /* Frameworks */,
+				500DA3D61CD5A19E001419C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				500DA3DA1CD5A19E001419C7 /* PBXTargetDependency */,
+			);
+			name = JKPopoverUITests;
+			productName = JKPopoverUITests;
+			productReference = 500DA3D81CD5A19E001419C7 /* JKPopoverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		500DA3AC1CD5A19D001419C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = albert;
+				TargetAttributes = {
+					500DA3B31CD5A19D001419C7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = R9ETGYBWPU;
+					};
+					500DA3CC1CD5A19E001419C7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = R9ETGYBWPU;
+						TestTargetID = 500DA3B31CD5A19D001419C7;
+					};
+					500DA3D71CD5A19E001419C7 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = R9ETGYBWPU;
+						TestTargetID = 500DA3B31CD5A19D001419C7;
+					};
+				};
+			};
+			buildConfigurationList = 500DA3AF1CD5A19D001419C7 /* Build configuration list for PBXProject "JKPopover" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 500DA3AB1CD5A19D001419C7;
+			productRefGroup = 500DA3B51CD5A19D001419C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				500DA3B31CD5A19D001419C7 /* JKPopover */,
+				500DA3CC1CD5A19E001419C7 /* JKPopoverTests */,
+				500DA3D71CD5A19E001419C7 /* JKPopoverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		500DA3B21CD5A19D001419C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500DA3C71CD5A19E001419C7 /* LaunchScreen.storyboard in Resources */,
+				500DA3C41CD5A19E001419C7 /* Assets.xcassets in Resources */,
+				500DA3C21CD5A19E001419C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		500DA3CB1CD5A19E001419C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		500DA3D61CD5A19E001419C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		500DA3B01CD5A19D001419C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500DA3F21CD5A1C5001419C7 /* JKPopoverTool.m in Sources */,
+				500DA3BF1CD5A19E001419C7 /* ViewController.m in Sources */,
+				500DA3F11CD5A1C5001419C7 /* JKPopoverItem.m in Sources */,
+				500DA3BC1CD5A19E001419C7 /* AppDelegate.m in Sources */,
+				500DA3B91CD5A19D001419C7 /* main.m in Sources */,
+				500DA3F31CD5A1C5001419C7 /* JKPopoverView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		500DA3C91CD5A19E001419C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500DA3D21CD5A19E001419C7 /* JKPopoverTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		500DA3D41CD5A19E001419C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				500DA3DD1CD5A19E001419C7 /* JKPopoverUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		500DA3CF1CD5A19E001419C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 500DA3B31CD5A19D001419C7 /* JKPopover */;
+			targetProxy = 500DA3CE1CD5A19E001419C7 /* PBXContainerItemProxy */;
+		};
+		500DA3DA1CD5A19E001419C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 500DA3B31CD5A19D001419C7 /* JKPopover */;
+			targetProxy = 500DA3D91CD5A19E001419C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		500DA3C01CD5A19E001419C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				500DA3C11CD5A19E001419C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		500DA3C51CD5A19E001419C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				500DA3C61CD5A19E001419C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		500DA3DF1CD5A19E001419C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		500DA3E01CD5A19E001419C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		500DA3E21CD5A19E001419C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JKPopover/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jkdev123cool.JKPopover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		500DA3E31CD5A19E001419C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JKPopover/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jkdev123cool.JKPopover;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		500DA3E51CD5A19E001419C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JKPopoverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jkdev123cool.JKPopoverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKPopover.app/JKPopover";
+			};
+			name = Debug;
+		};
+		500DA3E61CD5A19E001419C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JKPopoverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jkdev123cool.JKPopoverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKPopover.app/JKPopover";
+			};
+			name = Release;
+		};
+		500DA3E81CD5A19E001419C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JKPopoverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jkdev123cool.JKPopoverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JKPopover;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		500DA3E91CD5A19E001419C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JKPopoverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jkdev123cool.JKPopoverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JKPopover;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		500DA3AF1CD5A19D001419C7 /* Build configuration list for PBXProject "JKPopover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				500DA3DF1CD5A19E001419C7 /* Debug */,
+				500DA3E01CD5A19E001419C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		500DA3E11CD5A19E001419C7 /* Build configuration list for PBXNativeTarget "JKPopover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				500DA3E21CD5A19E001419C7 /* Debug */,
+				500DA3E31CD5A19E001419C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		500DA3E41CD5A19E001419C7 /* Build configuration list for PBXNativeTarget "JKPopoverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				500DA3E51CD5A19E001419C7 /* Debug */,
+				500DA3E61CD5A19E001419C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		500DA3E71CD5A19E001419C7 /* Build configuration list for PBXNativeTarget "JKPopoverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				500DA3E81CD5A19E001419C7 /* Debug */,
+				500DA3E91CD5A19E001419C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 500DA3AC1CD5A19D001419C7 /* Project object */;
+}
