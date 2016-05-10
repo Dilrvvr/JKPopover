@@ -97,12 +97,21 @@
     
     //cell普通状态图片
     if ([self.dataSource respondsToSelector:@selector(popoverView:imageNameInrow:)]) {
-        cell.imageView.image = [UIImage imageNamed:[self.dataSource popoverView:self imageNameInrow:indexPath.row]];
+        NSString *imageName = [self.dataSource popoverView:self imageNameInrow:indexPath.row];
+        
+        if (imageName) {
+            UIImage *image = [UIImage imageNamed:imageName];
+            cell.imageView.image = image;
+        }
     }
     
     //cell高亮状态图片
     if ([self.dataSource respondsToSelector:@selector(popoverView:hightImageNameInrow:)]) {
-        cell.imageView.highlightedImage = [UIImage imageNamed:[self.dataSource popoverView:self hightImageNameInrow:indexPath.row]];
+        NSString *imageName = [self.dataSource popoverView:self hightImageNameInrow:indexPath.row];
+        if (imageName) {
+            UIImage *image = [UIImage imageNamed:imageName];
+            cell.imageView.highlightedImage =image;
+        }
     }
     
     return cell;

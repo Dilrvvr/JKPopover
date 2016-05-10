@@ -35,7 +35,7 @@
     JKPopoverItem *item1 = [JKPopoverItem itemWithTitle:@"全部已读" normalImage:@"ic_quanxuan" highlightedImage:nil];
     JKPopoverItem *item2 = [JKPopoverItem itemWithTitle:@"全部删除" normalImage:@"ic_delet" highlightedImage:nil];
     NSArray *itemsArr = @[item1, item2];
-    
+  
     [[JKPopoverTool showWithPopoverItems:itemsArr popFrame:CGRectMake(70, 133, 120, 88) rowHeight:44] setSelectedIndexBlock:^(NSInteger index) {
         switch (index) {
             case 0:
