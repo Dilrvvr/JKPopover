@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "JKPopoverTool.h"
+#import "JKPopoverView.h"
 
 @interface ViewController ()
 
@@ -18,8 +18,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor orangeColor];
-    
     UIButton *showButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
     showButton.frame = CGRectMake(100, 100, 60, 30);
     showButton.backgroundColor = [UIColor cyanColor];
@@ -28,27 +26,31 @@
     [showButton setTitleColor:[UIColor grayColor] forState:(UIControlStateHighlighted)];
     [showButton addTarget:self action:@selector(show) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:showButton];
+    
     NSLog(@"%@", NSStringFromCGPoint(showButton.center));
 }
 
 - (void)show{
-    JKPopoverItem *item1 = [JKPopoverItem itemWithTitle:@"全部已读" normalImage:@"ic_quanxuan" highlightedImage:nil];
-    JKPopoverItem *item2 = [JKPopoverItem itemWithTitle:@"全部删除" normalImage:@"ic_delet" highlightedImage:nil];
-    NSArray *itemsArr = @[item1, item2];
-  
-    [[JKPopoverTool showWithPopoverItems:itemsArr popFrame:CGRectMake(70, 133, 120, 88) rowHeight:44] setSelectedIndexBlock:^(NSInteger index) {
-        switch (index) {
-            case 0:
-                NSLog(@"选中了第1行---");
-                break;
-                
-            case 1:
-                NSLog(@"选中了第2行---");
-                break;
-                
-            default:
-                break;
-        }
+    
+    __weak typeof(self) weakSelf = self;
+    
+    JKPopoverItem *item1 = [JKPopoverItem itemWithTitle:@"redColor" normalImage:nil highlightedImage:nil selectBlock:^(JKPopoverItem *item) {
+        
+        weakSelf.view.backgroundColor = [UIColor redColor];
+    }];
+    
+    JKPopoverItem *item2 = [JKPopoverItem itemWithTitle:@"whiteColor" normalImage:nil highlightedImage:nil selectBlock:^(JKPopoverItem *item) {
+        
+        weakSelf.view.backgroundColor = [UIColor whiteColor];
+    }];
+    
+    JKPopoverItem *item3 = [JKPopoverItem itemWithTitle:@"orangeColor" normalImage:nil highlightedImage:nil selectBlock:^(JKPopoverItem *item) {
+        
+        weakSelf.view.backgroundColor = [UIColor orangeColor];
+    }];
+    
+    [JKPopoverView showWithPopoverItems:@[item1, item2, item3] popFrame:CGRectMake(70, 133, 120, 132) tableViewConfiguration:^(UITableView *tableView) {
+        
     }];
 }
 @end

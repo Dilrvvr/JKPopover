@@ -7,6 +7,7 @@
 //
 
 #import "JKPopoverView.h"
+#import "JKPopoverCell.h"
 
 #define JKScreenW [UIScreen mainScreen].bounds.size.width
 #define JKScreenH [UIScreen mainScreen].bounds.size.height
@@ -14,105 +15,191 @@
 @interface JKPopoverView ()<UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 /** tableView */
 @property (nonatomic, weak) UITableView *tableView;
+
+/** items */
+@property (nonatomic, strong) NSArray *items;
+
+/** tableView的frame */
+@property (nonatomic, assign) CGRect popFrame;
 @end
 
 @implementation JKPopoverView
+
++ (void)showWithPopoverItems:(NSArray *)items popFrame:(CGRect)popFrame tableViewConfiguration:(void(^)(UITableView *tableView))tableViewConfiguration{
+    
+    for (id itm in items) {
+        if (![itm isKindOfClass:[JKPopoverItem class]]) {
+            NSLog(@"数组中每个元素都应该是(JKPopoverItem *)！");
+            return;
+        }
+    }
+    
+    JKPopoverView *popView = [[JKPopoverView alloc] init];
+    
+    !tableViewConfiguration ? : tableViewConfiguration(popView.tableView);
+    
+    popView.items = items;
+    popView.popFrame = popFrame;
+    
+    [[UIApplication sharedApplication].delegate.window addSubview:popView];
+}
 
 #pragma mark - 懒加载
 - (UITableView *)tableView{
     if (_tableView == nil) {
         UITableView *tableView = [[UITableView alloc] init];
+        [self addSubview:tableView];
         _tableView = tableView;
+        
+        _tableView.layer.anchorPoint = CGPointMake(0.5, 0);
+        _tableView.scrollEnabled = NO;
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.showsVerticalScrollIndicator = NO;
         _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+        _tableView.layer.cornerRadius = 5;
         _tableView.backgroundColor = [UIColor colorWithRed:240/255.0 green:240/255.0 blue:240/255.0 alpha:1];
-        [self addSubview:_tableView];
+        _tableView.hidden = YES;
+        
+        [_tableView registerClass:[JKPopoverCell class] forCellReuseIdentifier:NSStringFromClass([JKPopoverCell class])];
     }
     return _tableView;
 }
 
 #pragma mark - 初始化
-+ (instancetype)popoverView{
-    return [[self alloc] init];
-}
-
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        
-        self.backgroundColor = [UIColor clearColor];
-        //self.userInteractionEnabled = YES;
-        
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(remove)];
-        tap.delegate = self;
-        [self addGestureRecognizer:tap];
+        [self initialization];
     }
     return self;
 }
 
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    
-    if (self.popFrame.size.width && self.popFrame.size.height) {
-        self.tableView.frame = self.popFrame;
-    }else{
-        self.tableView.bounds = CGRectMake(0, 0, JKScreenW * 0.6, JKScreenH * 0.6);
-        self.tableView.center = self.center;
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super initWithCoder:aDecoder]) {
+        [self initialization];
     }
+    return self;
+}
+
+- (void)initialization{
+    self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(remove)];
+    tap.delegate = self;
+    [self addGestureRecognizer:tap];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
+}
+
+- (void)orientationChanged:(NSNotification *)noti{
+    
+    switch ([UIApplication sharedApplication].statusBarOrientation){
+        case UIInterfaceOrientationPortrait:{
+            
+            //        orientationLabel.text = "面向设备保持垂直，Home键位于下部"
+            [self relayout];
+        }
+        case UIInterfaceOrientationPortraitUpsideDown:{
+            
+            //            orientationLabel.text = "面向设备保持垂直，Home键位于上部"
+        }
+        case UIInterfaceOrientationLandscapeLeft:{
+            
+            //            orientationLabel.text = "面向设备保持水平，Home键位于左侧"
+            [self relayout];
+        }
+        case UIInterfaceOrientationLandscapeRight:{
+            
+            //            orientationLabel.text = "面向设备保持水平，Home键位于右侧"
+            [self relayout];
+        }
+        default:{
+            
+            //            orientationLabel.text = "方向未知"
+        }
+    }
+}
+
+- (void)relayout{
+    self.frame = CGRectMake(0, 0, JKScreenW, JKScreenH);
+}
+
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 //点击空白移除
 - (void)remove{
-    [self removeFromSuperview];
+    
+    self.window.userInteractionEnabled = NO;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.tableView.transform = CGAffineTransformMakeScale(1, 0.001);
+        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0];
+        
+    } completion:^(BOOL finished) {
+        self.window.userInteractionEnabled = YES;
+        
+        [self.tableView removeFromSuperview];
+        self.tableView = nil;
+        [self removeFromSuperview];
+        
+    }];
 }
 
 //设置tableView的frame
 - (void)setPopFrame:(CGRect)popFrame{
     _popFrame = popFrame;
     
-    [self layoutIfNeeded];
+    if (self.popFrame.size.width && self.popFrame.size.height) {
+        self.tableView.frame = self.popFrame;
+        
+    }else{
+        self.tableView.bounds = CGRectMake(0, 0, JKScreenW * 0.6, JKScreenH * 0.6);
+        self.tableView.center = self.center;
+    }
+    
+    self.tableView.transform = CGAffineTransformMakeScale(1, 0.001);
+}
+
+- (void)didMoveToSuperview{
+    if (!self.superview) return;
+    
+    self.tableView.hidden = NO;
+    
+    self.window.userInteractionEnabled = NO;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+        self.tableView.transform = CGAffineTransformIdentity;
+        
+    } completion:^(BOOL finished) {
+        self.window.userInteractionEnabled = YES;
+    }];
+}
+
+- (void)setFrame:(CGRect)frame{
+    frame = [UIScreen mainScreen].bounds;
+    [super setFrame:frame];
 }
 
 #pragma mark - UITableViewDataSource
 /** 返回多少行 */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return [self.dataSource numberOfRowsInMainTableViewpopoverView:self];
+    return self.items.count;
 }
 
 /** 设置cell */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //创建cell
-    static NSString *reuseId = @"pop";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
+    
+    JKPopoverCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JKPopoverCell class])];
+    
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:reuseId];
-        cell.backgroundColor = [UIColor clearColor];
+        cell = [[JKPopoverCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:NSStringFromClass([JKPopoverCell class])];
     }
     
-    //设置cell文字
-    cell.textLabel.text = [self.dataSource popoverView:self titleInrow:indexPath.row];
-    cell.textLabel.font = [UIFont systemFontOfSize:14];
-    
-    //cell普通状态图片
-    if ([self.dataSource respondsToSelector:@selector(popoverView:imageNameInrow:)]) {
-        NSString *imageName = [self.dataSource popoverView:self imageNameInrow:indexPath.row];
-        
-        if (imageName) {
-            UIImage *image = [UIImage imageNamed:imageName];
-            cell.imageView.image = image;
-        }
-    }
-    
-    //cell高亮状态图片
-    if ([self.dataSource respondsToSelector:@selector(popoverView:hightImageNameInrow:)]) {
-        NSString *imageName = [self.dataSource popoverView:self hightImageNameInrow:indexPath.row];
-        if (imageName) {
-            UIImage *image = [UIImage imageNamed:imageName];
-            cell.imageView.highlightedImage =image;
-        }
-    }
+    cell.item = self.items[indexPath.row];
     
     return cell;
 }
@@ -120,18 +207,20 @@
 #pragma mark - UITableViewDelegate
 /** 选中了某一行 */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([self.delegate respondsToSelector:@selector(popoverView:didSelectIndex:)]) {
-        [self.delegate popoverView:self didSelectIndex:indexPath.row];
-    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    JKPopoverItem *item = self.items[indexPath.row];
+    
+    !item.selectBlock ? : item.selectBlock(item);
+    
+    [self remove];
 }
 
 /** 设置每行的高度 */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if ([self.delegate respondsToSelector:@selector(popoverView:heightForRowAtIndexPath:)]) {
-        return [self.delegate popoverView:self heightForRowAtIndexPath:indexPath];
-    }else{
-        return 44;
-    }
+    JKPopoverItem *item = self.items[indexPath.row];
+    
+    return item.rowHeight;
 }
 
 #pragma mark - UIGestureRecognizerDelegate
@@ -139,6 +228,7 @@
     
     if ([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"]) {
         return NO;
+        
     }else{
         return YES;
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50014569205CC6F100F16FD7 /* JKPopoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 50014563205CC6F100F16FD7 /* JKPopoverCell.m */; };
+		5001456A205CC6F100F16FD7 /* JKPopoverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 50014564205CC6F100F16FD7 /* JKPopoverItem.m */; };
+		5001456B205CC6F100F16FD7 /* JKPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 50014568205CC6F100F16FD7 /* JKPopoverView.m */; };
 		500DA3B91CD5A19D001419C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3B81CD5A19D001419C7 /* main.m */; };
 		500DA3BC1CD5A19E001419C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3BB1CD5A19E001419C7 /* AppDelegate.m */; };
 		500DA3BF1CD5A19E001419C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3BE1CD5A19E001419C7 /* ViewController.m */; };
@@ -15,9 +18,6 @@
 		500DA3C71CD5A19E001419C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500DA3C51CD5A19E001419C7 /* LaunchScreen.storyboard */; };
 		500DA3D21CD5A19E001419C7 /* JKPopoverTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3D11CD5A19E001419C7 /* JKPopoverTests.m */; };
 		500DA3DD1CD5A19E001419C7 /* JKPopoverUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3DC1CD5A19E001419C7 /* JKPopoverUITests.m */; };
-		500DA3F11CD5A1C5001419C7 /* JKPopoverItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3EC1CD5A1C5001419C7 /* JKPopoverItem.m */; };
-		500DA3F21CD5A1C5001419C7 /* JKPopoverTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3EE1CD5A1C5001419C7 /* JKPopoverTool.m */; };
-		500DA3F31CD5A1C5001419C7 /* JKPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 500DA3F01CD5A1C5001419C7 /* JKPopoverView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		50014563205CC6F100F16FD7 /* JKPopoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPopoverCell.m; sourceTree = "<group>"; };
+		50014564205CC6F100F16FD7 /* JKPopoverItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPopoverItem.m; sourceTree = "<group>"; };
+		50014565205CC6F100F16FD7 /* JKPopoverItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPopoverItem.h; sourceTree = "<group>"; };
+		50014566205CC6F100F16FD7 /* JKPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPopoverView.h; sourceTree = "<group>"; };
+		50014567205CC6F100F16FD7 /* JKPopoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPopoverCell.h; sourceTree = "<group>"; };
+		50014568205CC6F100F16FD7 /* JKPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPopoverView.m; sourceTree = "<group>"; };
 		500DA3B41CD5A19D001419C7 /* JKPopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKPopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		500DA3B81CD5A19D001419C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		500DA3BA1CD5A19E001419C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,12 +60,6 @@
 		500DA3D81CD5A19E001419C7 /* JKPopoverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKPopoverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		500DA3DC1CD5A19E001419C7 /* JKPopoverUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKPopoverUITests.m; sourceTree = "<group>"; };
 		500DA3DE1CD5A19E001419C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		500DA3EB1CD5A1C5001419C7 /* JKPopoverItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPopoverItem.h; sourceTree = "<group>"; };
-		500DA3EC1CD5A1C5001419C7 /* JKPopoverItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPopoverItem.m; sourceTree = "<group>"; };
-		500DA3ED1CD5A1C5001419C7 /* JKPopoverTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPopoverTool.h; sourceTree = "<group>"; };
-		500DA3EE1CD5A1C5001419C7 /* JKPopoverTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPopoverTool.m; sourceTree = "<group>"; };
-		500DA3EF1CD5A1C5001419C7 /* JKPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKPopoverView.h; sourceTree = "<group>"; };
-		500DA3F01CD5A1C5001419C7 /* JKPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKPopoverView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,12 +153,12 @@
 		500DA3EA1CD5A1C5001419C7 /* JKPopover */ = {
 			isa = PBXGroup;
 			children = (
-				500DA3EB1CD5A1C5001419C7 /* JKPopoverItem.h */,
-				500DA3EC1CD5A1C5001419C7 /* JKPopoverItem.m */,
-				500DA3ED1CD5A1C5001419C7 /* JKPopoverTool.h */,
-				500DA3EE1CD5A1C5001419C7 /* JKPopoverTool.m */,
-				500DA3EF1CD5A1C5001419C7 /* JKPopoverView.h */,
-				500DA3F01CD5A1C5001419C7 /* JKPopoverView.m */,
+				50014567205CC6F100F16FD7 /* JKPopoverCell.h */,
+				50014563205CC6F100F16FD7 /* JKPopoverCell.m */,
+				50014565205CC6F100F16FD7 /* JKPopoverItem.h */,
+				50014564205CC6F100F16FD7 /* JKPopoverItem.m */,
+				50014566205CC6F100F16FD7 /* JKPopoverView.h */,
+				50014568205CC6F100F16FD7 /* JKPopoverView.m */,
 			);
 			path = JKPopover;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 				TargetAttributes = {
 					500DA3B31CD5A19D001419C7 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = R9ETGYBWPU;
+						DevelopmentTeam = YX4Y4G65BK;
 					};
 					500DA3CC1CD5A19E001419C7 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -296,12 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				500DA3F21CD5A1C5001419C7 /* JKPopoverTool.m in Sources */,
 				500DA3BF1CD5A19E001419C7 /* ViewController.m in Sources */,
-				500DA3F11CD5A1C5001419C7 /* JKPopoverItem.m in Sources */,
 				500DA3BC1CD5A19E001419C7 /* AppDelegate.m in Sources */,
+				50014569205CC6F100F16FD7 /* JKPopoverCell.m in Sources */,
+				5001456A205CC6F100F16FD7 /* JKPopoverItem.m in Sources */,
 				500DA3B91CD5A19D001419C7 /* main.m in Sources */,
-				500DA3F31CD5A1C5001419C7 /* JKPopoverView.m in Sources */,
+				5001456B205CC6F100F16FD7 /* JKPopoverView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YX4Y4G65BK;
 				INFOPLIST_FILE = JKPopover/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -452,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YX4Y4G65BK;
 				INFOPLIST_FILE = JKPopover/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -527,6 +529,7 @@
 				500DA3E31CD5A19E001419C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		500DA3E41CD5A19E001419C7 /* Build configuration list for PBXNativeTarget "JKPopoverTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +538,7 @@
 				500DA3E61CD5A19E001419C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		500DA3E71CD5A19E001419C7 /* Build configuration list for PBXNativeTarget "JKPopoverUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +547,7 @@
 				500DA3E91CD5A19E001419C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
