@@ -76,7 +76,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    if (!self.item.normalImage && !self.item.highlightedImage && self.textLabel.textAlignment == NSTextAlignmentLeft) {
+    if (!self.item.normalImage && self.textLabel.textAlignment == NSTextAlignmentLeft) {
         
         CGRect rect = self.contentView.bounds;
         

@@ -9,9 +9,6 @@
 #import "JKPopoverView.h"
 #import "JKPopoverCell.h"
 
-#define JKScreenW [UIScreen mainScreen].bounds.size.width
-#define JKScreenH [UIScreen mainScreen].bounds.size.height
-
 @interface JKPopoverView ()<UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate>
 /** tableView */
 @property (nonatomic, weak) UITableView *tableView;
@@ -121,7 +118,8 @@
 }
 
 - (void)relayout{
-    self.frame = CGRectMake(0, 0, JKScreenW, JKScreenH);
+    
+    self.frame = CGRectMake(0, 0, ([UIScreen mainScreen].bounds.size.width), ([UIScreen mainScreen].bounds.size.height));
 }
 
 - (void)dealloc{
@@ -152,10 +150,12 @@
     _popFrame = popFrame;
     
     if (self.popFrame.size.width && self.popFrame.size.height) {
+        
         self.tableView.frame = self.popFrame;
         
     }else{
-        self.tableView.bounds = CGRectMake(0, 0, JKScreenW * 0.6, JKScreenH * 0.6);
+        
+        self.tableView.bounds = CGRectMake(0, 0, ([UIScreen mainScreen].bounds.size.width) * 0.6, ([UIScreen mainScreen].bounds.size.height) * 0.6);
         self.tableView.center = self.center;
     }
     
@@ -170,16 +170,20 @@
     self.window.userInteractionEnabled = NO;
     
     [UIView animateWithDuration:0.25 animations:^{
+        
         self.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
         self.tableView.transform = CGAffineTransformIdentity;
         
     } completion:^(BOOL finished) {
+        
         self.window.userInteractionEnabled = YES;
     }];
 }
 
 - (void)setFrame:(CGRect)frame{
+    
     frame = [UIScreen mainScreen].bounds;
+    
     [super setFrame:frame];
 }
 
@@ -196,6 +200,7 @@
     JKPopoverCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([JKPopoverCell class])];
     
     if (cell == nil) {
+        
         cell = [[JKPopoverCell alloc] initWithStyle:(UITableViewCellStyleDefault) reuseIdentifier:NSStringFromClass([JKPopoverCell class])];
     }
     
@@ -227,9 +232,11 @@
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch{
     
     if ([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"]) {
+        
         return NO;
         
     }else{
+        
         return YES;
     }
 }

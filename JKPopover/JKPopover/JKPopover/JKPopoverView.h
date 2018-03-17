@@ -11,5 +11,5 @@
 
 @interface JKPopoverView : UIView
 
-+ (void)showWithPopoverItems:(NSArray *)items popFrame:(CGRect)popFrame tableViewConfiguration:(void(^)(UITableView *tableView))tableViewConfiguration;
++ (void)showWithPopoverItems:(NSArray<JKPopoverItem *> *)items popFrame:(CGRect)popFrame tableViewConfiguration:(void(^)(UITableView *tableView))tableViewConfiguration;
 @end
